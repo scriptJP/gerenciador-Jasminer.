@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jasminer - Gerenciador de Finanças</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Jasminer</h1>
+        <h2>Gerenciador de Finanças</h2>
+    </header>
+    <main>
+        <section id="user-info">
+            <h3>Informações do Usuário</h3>
+            <label for="name">Qual é o seu nome?</label>
+            <input type="text" id="name">
+            
+            <label for="employment">Você é CLT ou PJ?</label>
+            <select id="employment">
+                <option value="clt">CLT</option>
+                <option value="pj">PJ</option>
+            </select>
+            
+            <label for="income" id="income-label">Qual é o seu salário líquido mensal?</label>
+            <input type="number" id="income">
+            
+            <button id="calculate">Calcular</button>
+        </section>
+        
+        <section id="results" style="display: none;">
+            <h3>Distribuição da Renda de <span id="user-name"></span></h3>
+            <p>Gastos Essenciais: <span id="essential"></span></p>
+            <p>Gastos Importantes: <span id="important"></span></p>
+            <p>Gastos Não Essenciais: <span id="non-essential"></span></p>
+        </section>
+        
+        <section id="expenses" style="display: none;">
+            <h3>Preencha e organize seus gastos agora!</h3>
+            <label for="expense-description">Descrição do Gasto:</label>
+            <input type="text" id="expense-description">
+            
+            <label for="expense-value">Valor do Gasto:</label>
+            <input type="number" id="expense-value">
+            
+            <button id="add-expense">Adicionar Gasto</button>
+            
+            <h4>Lista de Gastos:</h4>
+            <ul id="expense-list"></ul>
+            
+            <button id="download-pdf">Baixar Lista de Gastos em PDF</button>
+        </section>
+    </main>
+    <footer>
+        <p>Desenvolvido por João Almeida - Todos os direitos reservados</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
